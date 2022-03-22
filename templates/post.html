@@ -1,22 +1,28 @@
-{% include "header.html" %}
-<!-- {% if articles['id'] == 1 %}
-<header
-class="masthead"
-style="background-image: url({{url_for('static', filename='assets/img/health-craze.jpg')}})">
-{% elif articles['id'] == 2 %}
-<header
-class="masthead"
-style="background-image: url( {{url_for('static', filename='assets/img/things-to-do-when-bored.jpg')}})">
-{% elif articles['id'] == 3 %}
-<header
-class="masthead"
-style="background-image: url({‌{url_for('static', filename='assets/img/internittent-fasting.jpg')}})"> -->
-<!-- {% endif %} -->
-    <!-- Page Header-->
+{% include "header.html" %} 
 
+    <!-- <!-- Page Header -->
+    {% if articles['id'] == 1 %}
     <header
     class="masthead"
-    style="background-image: url(static/assets/img/health-craze.jpg)">
+    style="background-image: url(../static/assets/img/health-craze.jpg)"
+    >
+    {% elif articles['id'] == 2 %}
+    <header
+        class="masthead"
+        style="background-image: url(../static/assets/img/things-to-do-when-bored.jpg)"
+    >
+    {% elif articles['id'] == 3 %}
+        <header
+        class="masthead"
+        style="background-image: url(../static/assets/img/internittent-fasting.jpg)"
+        >
+        -->
+      {% endif %}
+      <!-- <!-- Page Header -->
+
+    <!-- <header
+    class="masthead"
+    style="background-image: url(../static/assets/img/about-bg.jpg)"> -->
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
@@ -34,14 +40,17 @@ style="background-image: url({‌{url_for('static', filename='assets/img/interni
     </div>
     </header>
     <!-- Post Content-->
-    <article class="mb-4">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
-            <p>{{ articles['body'] }}</p>
+      <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+          <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+              <p>{{ articles['body'] }}</p>
+            </div>
+          </div>
         </div>
-        </div>
-    </div>
-    </article>
+      </article>
 
-{% include "footer.html" %}
+      {% include "footer.html" %}
+    </header>
+  </header>
+</header>
